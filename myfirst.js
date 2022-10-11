@@ -1,0 +1,9 @@
+var http = require('https');
+
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  res.write(req.url)
+  res.end("hi");
+  
+})
+http.listen(5000);
