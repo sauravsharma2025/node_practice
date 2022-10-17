@@ -21,6 +21,7 @@ const req = http.request(options, (res) => {
 	res.on('end', () => {
 		console.log('Body:', JSON.parse(data))
 	});
+	console.log(res.read(data))
 	
 }).on("error", (err) => {
 	console.log("Error: ", err)
